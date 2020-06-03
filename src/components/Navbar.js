@@ -1,30 +1,40 @@
-import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter, Link } from "react-router-dom";
 //import PropTypes from 'prop-types';
-import { createMuiTheme, ThemeProvider, withStyles, makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Main from "./Main"
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Grid from "@material-ui/core/Grid";
+import Main from "./Main";
 // import Box from '@material-ui/core/Box';
 // import Container from '@material-ui/core/Container';
 
-
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    background: 'white',
-    // border: 0,
-    // borderRadius: 3,
-    // boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    color: 'black',
+    background: "white",
+    color: "black",
     height: 48,
-    padding: '0 30px',
+    padding: "0 30px",
+    marginLeft: "auto",
   },
-});
+  links: {
+    padding: theme.spacing(1),
+    textDecoration: "none",
+    color: "#4c4c4c",
+    '&:hover': {
+      color: "#ffdfd4",
+      borderTop: "1px solid rgba(0, 0, 0, 0.42)",
+    },
+    // visibility: "hidden",
+    // transform: scaleX(0),
+    // transition: all 0.3s ease-in-out 0s;
+  },
+}));
 
-  //MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary mui-fixed MuiPaper-elevation0
+//MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary mui-fixed MuiPaper-elevation0
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -40,7 +50,6 @@ function ElevationScroll(props) {
   return React.cloneElement(children, {
     elevation: trigger ? 4 : 0,
   });
-  
 }
 
 export default function Navbar(props) {
@@ -51,18 +60,24 @@ export default function Navbar(props) {
       <ElevationScroll {...props}>
         <AppBar className={classes.root}>
           <Toolbar>
-            <Typography variant="h6">Hannah Yudkin</Typography>
-            <BrowserRouter> 
-              <Link to="/aboutme"> 
-                About Me
-              </Link>
-              <Link to="/portfolio"> 
-                Portfolio
-              </Link>
-              <Link to="/contact"> 
-                Contact
-              </Link>
-            </BrowserRouter>
+            <Grid
+              justify="space-between" // Add it here :)
+              container
+              spacing={24}
+            >
+              <Grid item>
+                <Typography variant="h5">Hannah Yudkin</Typography>
+              </Grid>
+              <Grid item>
+                <BrowserRouter>
+                  <Typography  variant="h7">
+                    <Link  className={ classes.links } to="/aboutme">About Me</Link>
+                    <Link className={ classes.links } to="/portfolio">Portfolio</Link>
+                    <Link className={ classes.links } to="/contact">Contact</Link>
+                  </Typography>
+                </BrowserRouter>
+              </Grid>
+            </Grid>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
