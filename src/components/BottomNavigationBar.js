@@ -6,7 +6,10 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import DescriptionIcon from "@material-ui/icons/Description";
-import Link from "@material-ui/core/Link";
+import ScrollToTop from './ScrollToTop';
+
+//import Link from "@material-ui/core/Link";
+
 
 const useStyles = makeStyles({
   root: {
@@ -15,6 +18,7 @@ const useStyles = makeStyles({
     bottom: 10,
   },
 });
+
 
 export default function BottomNavigationBar() {
   const classes = useStyles();
@@ -30,12 +34,15 @@ export default function BottomNavigationBar() {
       className={classes.root}
     >
       <BottomNavigationAction
+      className={classes.palette}
         target="_blank"
         href="https://github.com/HannahYudkin"
         label="Github"
         icon={<GitHubIcon />}
       />
+      <ScrollToTop>
         <BottomNavigationAction label="Return to Top" icon={<FavoriteIcon />} />
+        </ScrollToTop>
       <BottomNavigationAction
         target="_blank"
         href="https://www.linkedin.com/in/hannahyudkin/"

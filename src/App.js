@@ -5,8 +5,8 @@ import FuriendFinderCard from "./components/FuriendFinderCard";
 import Grid from "@material-ui/core/Grid";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import "./styles/App.css";
-import BottomNavigationBar from './components/BottomNavigationBar';
-import BusinessBlueprintCard from './components/BusinessBlueprintCard';
+import BottomNavigationBar from "./components/BottomNavigationBar";
+import BusinessBlueprintCard from "./components/BusinessBlueprintCard";
 
 const themePink = createMuiTheme({
   palette: {
@@ -40,7 +40,17 @@ function App() {
           <FuriendFinderCard />
           <BusinessBlueprintCard />
         </Grid>
-        <BottomNavigationBar/>
+        <Grid
+          container
+          direction="row"
+          justify="space-evenly"
+          alignItems="center"
+          spacing={2}
+        >
+          <FuriendFinderCard />
+          <BusinessBlueprintCard />
+        </Grid>
+        <BottomNavigationBar />
       </MuiThemeProvider>
     </div>
   );

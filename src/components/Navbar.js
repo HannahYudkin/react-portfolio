@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       color: "#ffdfd4",
       borderTop: "1px solid rgba(0, 0, 0, 0.42)",
+      borderColor: "#5BAthg",
     },
     // visibility: "hidden",
     // transform: scaleX(0),
@@ -63,14 +64,14 @@ export default function Navbar(props) {
             <Grid
               justify="space-between" // Add it here :)
               container
-              spacing={24}
+              spacing={4}
             >
               <Grid item>
                 <Typography variant="h5">Hannah Yudkin</Typography>
               </Grid>
               <Grid item>
                 <BrowserRouter>
-                  <Typography  variant="h7">
+                  <Typography  variant="h6">
                     <Link  className={ classes.links } to="/aboutme">About Me</Link>
                     <Link className={ classes.links } to="/portfolio">Portfolio</Link>
                     <Link className={ classes.links } to="/contact">Contact</Link>
