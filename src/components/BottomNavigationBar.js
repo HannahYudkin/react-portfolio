@@ -40,7 +40,12 @@ export default function BottomNavigationBar() {
         label="Github"
         icon={<GitHubIcon />}
       />
-        <BottomNavigationAction label="Return to Top" icon={<FavoriteIcon />} />
+      <BottomNavigationAction 
+        label="Return to Top" 
+        icon={<FavoriteIcon />} 
+      
+        
+        />
       <BottomNavigationAction
         target="_blank"
         href="https://www.linkedin.com/in/hannahyudkin/"

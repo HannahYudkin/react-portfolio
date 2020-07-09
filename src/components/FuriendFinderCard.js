@@ -45,7 +45,7 @@ export default function FuriendFinderCard() {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions >
         <Link
           target="_blank"
           href="https://github.com/fur-iend-finder/home"

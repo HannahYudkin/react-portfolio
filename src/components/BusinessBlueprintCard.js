@@ -8,8 +8,8 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
-import BusinessBlueprint from "../images/BusinessBlueprint.png";
-import BusinessBlueprintLogo from "../images/BusinessBlueprintLogo.png";
+import BusinessBlueprint from "../../public/images/BusinessBlueprint.png";
+import BusinessBlueprintLogo from "../../public/images/BusinessBlueprintLogo.png";
 
 const useStyles = makeStyles({
   root: {

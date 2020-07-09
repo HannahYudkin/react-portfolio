@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Grid from "@material-ui/core/Grid";
-import Main from "./Main";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 // import Box from '@material-ui/core/Box';
 // import Container from '@material-ui/core/Container';
 
@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
       color: "#ffdfd4",
       borderTop: "1px solid rgba(0, 0, 0, 0.42)",
       borderColor: "#5BAthg",
+      borderTopWidth: 4
     },
     // visibility: "hidden",
     // transform: scaleX(0),
@@ -35,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-//MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary mui-fixed MuiPaper-elevation0
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -72,9 +72,9 @@ export default function Navbar(props) {
               <Grid item>
                 <BrowserRouter>
                   <Typography  variant="h6">
-                    <Link  className={ classes.links } to="/aboutme">About Me</Link>
-                    <Link className={ classes.links } to="/portfolio">Portfolio</Link>
-                    <Link className={ classes.links } to="/contact">Contact</Link>
+                    <AnchorLink className={ classes.links } href="#aboutme">About Me</AnchorLink>
+                    <AnchorLink className={ classes.links } href="#portfolio">Portfolio</AnchorLink>
+                    <AnchorLink className={ classes.links } href="#contact">Contact</AnchorLink>
                   </Typography>
                 </BrowserRouter>
               </Grid>

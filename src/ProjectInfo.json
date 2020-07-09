@@ -1,0 +1,32 @@
+[
+    {
+        "img": "AboveCurve.png",
+        "imgAlt": "Above Curve Img",
+        "logo": "AboveCurveLogo.png",
+        "logoAlt": "Above Curve Logo",
+        "title": "Above Curve",
+        "description": "A visualization tool that displays a variety of public data sets for researchers to rapidly gain insights backed by reputable and cited sources.",
+        "deployed": "https://lalliere.github.io/abovecurve-sample/",
+        "github": "https://github.com/lalliere/abovecurve-sample"
+    },
+    {
+        "img": "BusinessBlueprint.png",
+        "imgAlt": "Business Blueprint Image",
+        "logo": "BusinessBlueprintLogo.png",
+        "logoAlt": "Business Blueprint Logo",
+        "title": "Business Blueprint",
+        "description": "Helping small businesses manage their daily operations by tracking their customer base, inventory, sales per customer, and issuing outstanding invoices.",
+        "deployed": "https://business-blueprint.herokuapp.com/",
+        "github": "https://github.com/lalliere/business-blueprint"
+    },
+    {
+        "img": "FuriendFinder.png",
+        "imgAlt": "Furiend Finder Image",
+        "logo": "FuriendFinderLogo.png",
+        "logoAlt": "Furiend Finder Logo",
+        "title": "Furiend Finder",
+        "description": "Connect potential pet owners with animals currently in need at shelters accross the United States!",
+        "deployed": "https://fur-iend-finder.github.io/home/",
+        "github": "https://github.com/fur-iend-finder/home"
+    }
+]

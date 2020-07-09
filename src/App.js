@@ -1,12 +1,15 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
-import FuriendFinderCard from "./components/FuriendFinderCard";
 import Grid from "@material-ui/core/Grid";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import "./styles/App.css";
 import BottomNavigationBar from "./components/BottomNavigationBar";
-import BusinessBlueprintCard from "./components/BusinessBlueprintCard";
+import Projects from "./components/Projects";
+import ProjectInfo from "./ProjectInfo.json";
+import Wrapper from "./components/Wrapper";
+import AboutMe from './components/AboutMe';
+import Typography from "@material-ui/core/Typography";
 
 const themePink = createMuiTheme({
   palette: {
@@ -19,9 +22,13 @@ const themePink = createMuiTheme({
 function App() {
   return (
     <div className="App">
+        <section id="aboutme"></section>
       <MuiThemeProvider theme={themePink}>
         <Navbar />
         <Main />
+        <AboutMe />
+          <section id="portfolio"></section>
+        <Wrapper> 
         <Grid
           container
           direction="row"
@@ -29,27 +36,31 @@ function App() {
           alignItems="center"
           spacing={2}
         >
-          {/* <Grid container spacing={1}>
-          <Grid container item xs={12} spacing={3}>
-            <ImgMediaCard />
+          <Typography variant="h1">
+            Portfolio
+          </Typography>
+          <Grid container spacing={10}>
+            {ProjectInfo.map((project) => (
+              <Grid item spacing={3}>
+                <Projects
+                  img={project.img}
+                  imgAlt={project.imgAlt}
+                  logo = {project.logo}
+                  logoAlt={project.logoAlt}
+                  description={project.description}
+                  deployed={project.deployed}
+                  github={project.github}
+                />
+              </Grid>
+            ))}
+            <Grid item xs={12} />
           </Grid>
-          <Grid container item xs={12} spacing={3}>
-            <ImgMediaCard />
-          </Grid>
-        </Grid> */}
-          <FuriendFinderCard />
-          <BusinessBlueprintCard />
+        <Typography variant="h1">
+            Contact
+            <section id="contact"></section>
+        </Typography>
         </Grid>
-        <Grid
-          container
-          direction="row"
-          justify="space-evenly"
-          alignItems="center"
-          spacing={2}
-        >
-          <FuriendFinderCard />
-          <BusinessBlueprintCard />
-        </Grid>
+        </Wrapper>
         <BottomNavigationBar />
       </MuiThemeProvider>
     </div>
