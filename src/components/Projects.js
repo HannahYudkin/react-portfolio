@@ -22,13 +22,17 @@ const useStyles = makeStyles({
     textAlign: "left",
     color: "#EF6F6C",
   },
+  logo: {
+    height: "100px"
+  },
   body: {
-    color: "#005C97",
-    fontWeight: "bold",
-    padding: "15px",
-    paddingTop: "0",
-    marginTop: "0",
-    fontSize: "14pt",
+    // color: "#005C97",
+    // fontWeight: "bold",
+    // padding: "15px",
+    // paddingTop: "0",
+    // marginTop: "0",
+     fontSize: "14pt",
+    height: "115px"
   },
   buttons: {
     margin: "auto",
@@ -50,6 +54,7 @@ export default function Projects(props) {
         />
         <CardContent>
           <CardMedia
+          className={classes.logo}
             component="img"
             alt={props.logoAlt}
             //height="80px"
@@ -60,7 +65,7 @@ export default function Projects(props) {
             {" "}
             {props.title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography className={classes.body} variant="body2" color="textSecondary" component="p">
             {props.description}
           </Typography>
         </CardContent>
