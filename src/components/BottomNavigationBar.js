@@ -6,10 +6,9 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import DescriptionIcon from "@material-ui/icons/Description";
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 //import Link from "@material-ui/core/Link";
-
 
 const useStyles = makeStyles({
   root: {
@@ -17,8 +16,20 @@ const useStyles = makeStyles({
     postion: "center",
     bottom: 10,
   },
+  underline: {
+    textDecoration: "none",
+    borderBottom: "none",
+  },
+  heart: {
+    textDecoration: "none",
+    "&&&:before": {
+      borderBottom: "none",
+    },
+    "&&:after": {
+      borderBottom: "none",
+    },
+  },
 });
-
 
 export default function BottomNavigationBar() {
   const classes = useStyles();
@@ -34,18 +45,21 @@ export default function BottomNavigationBar() {
       className={classes.root}
     >
       <BottomNavigationAction
-      className={classes.palette}
+        className={classes.palette}
         target="_blank"
         href="https://github.com/HannahYudkin"
         label="Github"
         icon={<GitHubIcon />}
       />
-      <BottomNavigationAction 
-        label="Return to Top" 
-        icon={<FavoriteIcon />} 
-      
-        
+      <AnchorLink href="#aboutme" className="underline">
+        <BottomNavigationAction
+          label="Return to Top"
+          showLabel={true}
+          icon={<FavoriteIcon />}
+          className={classes.heart}
         />
+      </AnchorLink>
+
       <BottomNavigationAction
         target="_blank"
         href="https://www.linkedin.com/in/hannahyudkin/"
