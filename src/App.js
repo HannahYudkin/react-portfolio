@@ -65,6 +65,7 @@ function App() {
         <Main />
         <AboutMe />
         <section id="portfolio"></section>
+        <br></br>
         <Typography className={classes.title} variant="h1">
           Portfolio
         </Typography>
