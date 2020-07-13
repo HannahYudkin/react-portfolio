@@ -33,7 +33,7 @@ export default function AboutMe() {
   return (
     <>
       <Grid className={classes.main} container spacing={3}>
-        <Grid item className={classes.image} xs={6}>
+        <Grid item className={classes.image} xs={10} md={6}>
           <img
             className={classes.root}
             width="100%"
@@ -41,7 +41,7 @@ export default function AboutMe() {
             src={Headshot}
           ></img>
         </Grid>
-        <Grid className={classes.secondary} item xs={5}>
+        <Grid className={classes.secondary} item xs={10} md={5}>
           <h1 className={classes.h1}>About Me</h1>
           <br></br>
           <h2>

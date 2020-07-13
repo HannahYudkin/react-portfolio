@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 1200,
+    minWidth: "80%",
     minHeight: 500,
   },
   title: {
