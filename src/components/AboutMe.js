@@ -52,6 +52,11 @@ export default function AboutMe() {
             HTML, MongoDB, Express, React, and Node to connect front- and
             back-end design to make responsive web pages.{" "}
           </h2>
+          <h2>
+            Technical Skills: JavaScript / jQuery, React, Python, MySQL,
+            MongoDB, Node js / Express, HTML 5, CSS, Git, Bootstrap, JSON, AJAX,
+            Adobe Photoshop, Adobe Illustrator, Microsoft Office, App Inventor
+          </h2>
         </Grid>
       </Grid>
     </>
