@@ -44,8 +44,8 @@ function App() {
         <br></br>
         <br></br>
         <br></br>
-        <Typography className={styles.hoverEffect} variant="h1">
-          Portfolio
+        <Typography className={styles.titleContainer} variant="h1">
+          <div className={styles.hoverEffect}>Portfolio</div>
         </Typography>
         <Wrapper>
           <Grid
@@ -73,8 +73,8 @@ function App() {
             </Grid>
           </Grid>
         </Wrapper>
-        <Typography className={styles.hoverEffect} variant="h1">
-          Contact
+        <Typography className={styles.titleContainer} variant="h1">
+          <div className={styles.hoverEffect}>Contact</div>
           <section id="contact"></section>
         </Typography>
         <Wrapper>
