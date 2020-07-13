@@ -7,19 +7,18 @@ import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    alignItems: "flex",
     background: "white",
     color: "black",
-    height: 70,
     padding: "0 30px",
     marginLeft: "auto",
     align: "center",
-    "@media(minWidth: 780px)": {
-      height: 100,
+    "@media(maxWidth: 780px)": {
+      height: "100px",
+      background: "black",
     },
   },
   links: {
@@ -49,7 +48,7 @@ export default function Navbar(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar className={classes.root}>
+      <AppBar className={classes.root} xs={12}>
         <Toolbar>
           <Grid justify="space-between" container spacing={4}>
             <Grid item>
