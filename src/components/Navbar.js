@@ -1,16 +1,14 @@
 import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
-//import PropTypes from 'prop-types';
+import { BrowserRouter } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Grid from "@material-ui/core/Grid";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import "./../styles/App.module.css";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,8 +26,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     textDecoration: "none",
     color: "#4c4c4c",
+    position: "relative",
     "&:hover": {
-      color: "#ffdfd4",
+      color: "#c9a497",
       borderTop: "1px solid rgba(0, 0, 0, 0.42)",
       borderColor: "#5BAthg",
       borderTopWidth: 4,
