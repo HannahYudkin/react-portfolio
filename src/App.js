@@ -37,7 +37,7 @@ function App() {
       <section id="aboutme"></section>
       <MuiThemeProvider theme={themePink}>
         <Navbar />
-        <Main />
+        {/* <Main /> */}
         <AboutMe />
         <section id="portfolio"></section>
         <br></br>
@@ -77,9 +77,7 @@ function App() {
           <div className={styles.hoverEffect}>Contact</div>
           <section id="contact"></section>
         </Typography>
-        <Wrapper>
-          <Contact />
-        </Wrapper>
+        <Contact />
         <BottomNavigationBar />
       </MuiThemeProvider>
     </div>
