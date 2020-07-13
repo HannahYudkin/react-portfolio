@@ -10,10 +10,11 @@ a:visited {
 }
 
 .hoverEffect {
-  position: relative;
-  color: #000;
-  background-color: blueviolet;
-  text-decoration: none;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  margin-top: 10vh;
+  margin: 25px;
 }
 
 .hoverEffect a:hover {

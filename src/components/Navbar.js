@@ -9,7 +9,8 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Grid from "@material-ui/core/Grid";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import "./../styles/App.css";
+import "./../styles/App.module.css";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,10 +20,12 @@ const useStyles = makeStyles((theme) => ({
     padding: "0 30px",
     marginLeft: "auto",
     align: "center",
+    "@media(minWidth: 780px)": {
+      height: 100,
+    },
   },
   links: {
     padding: theme.spacing(1),
-    marginTop: 40,
     textDecoration: "none",
     color: "#4c4c4c",
     "&:hover": {
@@ -31,13 +34,14 @@ const useStyles = makeStyles((theme) => ({
       borderColor: "#5BAthg",
       borderTopWidth: 4,
     },
-    // visibility: "hidden",
-    // transform: scaleX(0),
-    // transition: all 0.3s ease-in-out 0s;
+  },
+  typographyLinks: {
+    marginTop: 35,
   },
   name: {
     fontFamily: "Merienda One, cursive",
     fontSize: 40,
+    marginTop: 15,
   },
 }));
 
@@ -48,11 +52,7 @@ export default function Navbar(props) {
       <CssBaseline />
       <AppBar className={classes.root}>
         <Toolbar>
-          <Grid
-            justify="space-between" // Add it here :)
-            container
-            spacing={4}
-          >
+          <Grid justify="space-between" container spacing={4}>
             <Grid item>
               <Typography className={classes.name} variant="h5">
                 Hannah Yudkin
@@ -60,7 +60,7 @@ export default function Navbar(props) {
             </Grid>
             <Grid item>
               <BrowserRouter>
-                <Typography variant="h6">
+                <Typography className={classes.typographyLinks} variant="h6">
                   <AnchorLink className={classes.links} href="#aboutme">
                     About Me
                   </AnchorLink>

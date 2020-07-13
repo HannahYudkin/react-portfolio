@@ -11,7 +11,7 @@ import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import styles from "./styles/App.css";
+import styles from "./styles/App.module.css";
 
 const themePink = createMuiTheme({
   palette: {
@@ -28,31 +28,6 @@ const useStyles = makeStyles(() => ({
     textAlign: "center",
     marginTop: "5vh",
   },
-  animatedlinks: {
-    position: "relative",
-    color: "#000",
-    textDecoration: "none",
-    backgroundColor: "white",
-    "&:hover": {
-      borderColor: "black",
-    },
-    "&:before": {
-      content: "",
-      position: "absolute",
-      borderBottomWidth: "100%",
-      borderBottomHeight: "2px",
-      bottom: "0",
-      left: "0",
-      backgroundColor: "#000",
-      visibility: "hidden",
-      transform: "scaleX(0)",
-      transition: "all 0.3s ease-in-out 0s",
-    },
-    "&:hover:before": {
-      visibility: "visible",
-      transform: "scaleX(1)",
-    },
-  },
 }));
 
 function App() {
@@ -66,7 +41,10 @@ function App() {
         <AboutMe />
         <section id="portfolio"></section>
         <br></br>
-        <Typography className={classes.title} variant="h1">
+        <br></br>
+        <br></br>
+        <br></br>
+        <Typography className={styles.hoverEffect} variant="h1">
           Portfolio
         </Typography>
         <Wrapper>
@@ -93,12 +71,14 @@ function App() {
               ))}
               <Grid item xs={12} />
             </Grid>
-            <Typography variant="h1">
-              Contact
-              <section id="contact"></section>
-            </Typography>
-            <Contact />
           </Grid>
+        </Wrapper>
+        <Typography className={styles.hoverEffect} variant="h1">
+          Contact
+          <section id="contact"></section>
+        </Typography>
+        <Wrapper>
+          <Contact />
         </Wrapper>
         <BottomNavigationBar />
       </MuiThemeProvider>
